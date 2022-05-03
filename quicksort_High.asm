@@ -24,6 +24,7 @@ main:
 	add $t1, $s5, $s6
 
     # getting the elements of array
+
 getinputfor:
     bgeu $t0, $t1, endgetinputfor   
     li $v0, 5              		    

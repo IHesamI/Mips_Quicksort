@@ -8,11 +8,13 @@ main:
     li $v0, 5
     syscall               
 	# array length
-    move $s7, $v0  
 
-	sll $s6, $s7, 2   
-       
-    move $a0,$s6			 
+    move $s7, $v0  
+	# allocate memory for array
+
+	sll $s6, $s7, 2          
+    
+	move $a0,$s6			 
 	li $v0, 9                
     syscall
 	
