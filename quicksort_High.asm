@@ -3,26 +3,27 @@
     line_sep:    .asciiz "\n" 
     .text       # here is text segment
     .globl main
+    # getting input from user
 main:
 
     li $v0, 5
     syscall               
-
+    #   array length
     move $s7, $v0  
-
+    # allocating array size
 	sll $s6, $s7, 2   
-       
+    
     move $a0,$s6			 
 	li $v0, 9                
     syscall
-	
+	# pointer of array
 	move $s5, $v0
 
 	move $t0, $s5
 	
 	add $t1, $s5, $s6
 
-
+    # getting the elements of array
 getinputfor:
     bgeu $t0, $t1, endgetinputfor   
     li $v0, 5              		    

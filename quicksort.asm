@@ -7,7 +7,7 @@ main:
 
     li $v0, 5
     syscall               
-
+	# array length
     move $s7, $v0  
 
 	sll $s6, $s7, 2   
